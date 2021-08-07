@@ -29,7 +29,7 @@
         </div>
 
         <div class="main">
-            <h1>Welcome</h1>
+            <h1 id="title">Welcome</h1>
         </div>
 
         <div id="about">
@@ -85,12 +85,37 @@
             <p>If you have any suggestions, questions or even want to upload your own cat photo to our cat gallery,
                 make sure to send us an email!
             </p>
-            <form>
-                <input type="text" id="name" placeholder="Name">
-                <input type="text" id="email" placeholder="Email">
-                
-
+            <form action="action_page.php">
+                <div class="row">
+                    <div class="col-40">
+                        <label for="name">Name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="name" name="name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-40">
+                        <label for="email">Email</label>
+                    </div>
+                    <div>
+                        <input type="text" id="email" name="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-40">
+                        <label for="description">Subject</label>
+                    </div>
+                    <div>
+                        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="file" id="myFile" name="filename">
+                    <input type="submit" value="Submit">
+                </div>
             </form>
+
         </div>
 
         

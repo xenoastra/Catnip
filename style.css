@@ -96,7 +96,10 @@ p{
 }
 
 /***************** MAIN *********************/
-
+#title{
+    padding-top: 20%;
+    padding-bottom: 30%;
+}
 /****************** ABOUT US ********************/
 .blob{
     width: 300px;
@@ -116,7 +119,68 @@ p{
     text-align: justify;
 }
 
+/************** CONTACT US **********************/
+form{
+    text-align: center;
+}
 
+.contact{
+    margin:auto;
+    padding-top: 10%;
+}
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+  
+label {
+    padding: 10px 10px 10px 0;
+    /* display: inline-block; */
+}
+  
+input[type=submit] {
+    background-color: #f4afab;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+  
+input[type=file] {
+    background-color: #f4afab;
+    color: white;
+    padding: 12px 20px 12px 80px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+  
+input[type=submit]:hover {
+    background-color: #ed7d78;
+}
+  
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+  
+.col-40 {
+    width: 40%;
+}
+  
+/* .col-75 {
+    width: 75%;
+    margin-top: 6px;
+} */
+  
 /********************** CAT VIDEO ****************/
 .container{
     height: 300px;
