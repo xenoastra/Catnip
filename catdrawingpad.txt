@@ -115,98 +115,125 @@ function ev_canvas (ev) {
 		func(ev);
 	}
 }
-var canvas, context, canvaso, contexto;
+<!DOCTYPE html>
+<html>
 
-function init () {
-	// Find the canvas element
-	canvaso = document.getElementById('imageView');
-	if (!canvaso) {
-		alert('Error: I cannot find the canvas element!');
-		return;
-	}
+  <head>
+      <meta charset="utf-8">
+      <title>
+          Draw your own cat!
+      </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<div id="sketch">
+  <canvas id="paint"></canvas>
+</div>
 
-	if (!canvaso.getContext) {
-		alert('Error: no canvas.getContext!');
-		return;
-	}
+<div id="settings"> Colour:
+  <button onclick="getColor('black');">Black</button>
+  <button onclick="getColor('red');">Red</button>
+  <button onclick="getColor('orange');">Orange</button>
+  <button onclick="getColor('yellow');">Yellow</button>
+  <button onclick="getColor('green');">Green</button>
+  <button onclick="getColor('blue');">Blue</button>
+  <button onclick="getColor('purple');">Purple</button>
+  <button onclick="getColor('white');">Eraser</button>
+  
+</div>
 
-	// Get the 2D canvas context
-	contexto = canvaso.getContext('2d');
-	if (!contexto) {
-		alert('Error: failed to getContext!');
-		return;
-	}
+<div id="settings"> Brush Size:
+  <button onclick="getSize('2');">Thin</button>
+  <button onclick="getSize('5');">Medium</button>
+  <button onclick="getSize('10');">Thick</button>
+  <button onclick="getSize('20');">Wide</button>
+</div>
+<p> Or add the hex of your own colour! </p>
+  <input id="hex" placeholder="#hex"></input>
+  <canvas id="draw"></canvas>
 
-	// Add the temporary canvas
-	var container = canvaso.parentNode;
-	canvas = document.createElement('canvas');
-	if (!canvas) {
-		alert('Error: I cannot create a new <canvas> element!');
-		return;
-	}
 
-function img_update () {
-	contexto.drawImage(canvas, 0, 0);
-	context.clearRect(0, 0, canvas.width, canvas.height);
+<body>
+		<div id="container">
+			<canvas id="imageView" width="400" height="300">
+				
+			</canvas>
+		</div>
+		<script src="script.js"></script>
+	</body>
+   
+  </html>
+  
+  <script>
+  var canvas = document.getElementById('paint');
+var ctx = canvas.getContext('2d');
+ 
+
+  function getColor(colour){ctx.strokeStyle = colour;}
+
+function getSize(size){ctx.lineWidth = size;}
+  
+
+// The event handler for any changes made to the tool selector
+
+ var canvas = document.getElementById("draw");
+
+var ctx = canvas.getContext("2d");
+resize();
+
+var canvas = document.getElementById('paint');
+var ctx = canvas.getContext('2d');
+ 
+var sketch = document.getElementById('sketch');
+var sketch_style = getComputedStyle(sketch);
+canvas.width = 600;
+canvas.height = 550;
+// resize canvas when window is resized
+function resize() {
+ ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
 }
-tools.pencil = function () {
-	this.mouseup = function (ev) {
-		if (tool.started) {
-			tool.mousemove(ev);
-			tool.started = false;
-			img_update();
-		}
-	};
-};
+
+// initialize position as 0,0
+var pos = { x: 0, y: 0 };
+
+// new position from mouse events
+function setPosition(e) {
+  pos.x = e.clientX;
+  pos.y = e.clientY;
+}
+
+function draw(e) {
+  if (e.buttons !== 1) return; // if mouse is not clicked, do not go further
+
+  var color = document.getElementById("hex").value;
+
+  ctx.beginPath(); // begin the drawing path
+
+  // width of line
+  ctx.lineCap = "round"; // rounded end cap
+  ctx.strokeStyle = color; // hex color of line
+
+  ctx.moveTo(pos.x, pos.y); // from position
+  setPosition(e);
+  ctx.lineTo(pos.x, pos.y); // to position
+
+  ctx.stroke(); // draw it!
+}
+
+
+// add window event listener to trigger when window is resized
+window.addEventListener("resize", resize);
+
+// add event listeners to trigger on different mouse events
+document.addEventListener("mousemove", draw);
+document.addEventListener("mousedown", setPosition);
+document.addEventListener("mouseenter", setPosition);
 </script>
 <style>
-	#container { position: relative; }
-	#imageView { border: 1px solid #000; }
-	#imageTemp { position: absolute; top: 1px; left: 1px; }
+*{font-family:sans-serif;}
+
+#settings { display: block; text-align:center}
+
+
+#paint {border: 1px solid black; background : #fffff; margin-left: auto; margin-right: auto; display: block;}
 </style>
-<script>
-
-	canvas.id = 'imageTemp';
-	canvas.width = canvaso.width;
-	canvas.height = canvaso.height;
-	container.appendChild(canvas);
-
-	context = canvas.getContext('2d');
-}
-
-</script>
-<style>
-	#container { position: relative; }
-	#imageView { border: 1px solid #000; }
-	#imageTemp { position: absolute; top: 1px; left: 1px; }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
- <label>Brush Size:
-	<select id="dtool">
-   		<option value="Thin">Thin</option>
-		<option value="Medium">Medium</option>
-        <option value="Thick">Thick</option>
-		
-	</select>
-</label>
- <label>Brush Colour:
-	<select id="dtools">
-     	<option value="Black">Black</option>
-   		<option value="Red">Red</option>
-		<option value="Orange">Orange</option>
-        <option value="Yellow">Yellow</option>
-        <option value="Green">Green</option>
-		<option value="Blue">Blue</option>
-        <option value="Purple">Purple</option>
-        <option value="Eraser">Eraser</option>

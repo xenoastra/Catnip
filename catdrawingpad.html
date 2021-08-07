@@ -2,31 +2,30 @@
 <html>
 
   <head>
-  <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Sketch a Cat</title>
-    </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drawingpad.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cats</title>
+</head>
 
-    <body>
-        <div class="navbar">
-            <a>Purrfect</a>
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About Us</a>
-            <div id="dropdown" class="dropdown">
-                <a href="cats.html">Cats</a>
-                <div class="dropdown-content">
-                    <a href="#catvideos">Cat Videos</a>
-                    <a href="#catgallery">Cat Gallery</a>
-                    <a href="#creatememe">Create Your Cat Meme</a>
-                    <a href="#catpuns">Cat Puns/Jokes</a>
-                    <a href="catdrawingpad.html">Sketch A Cat!</a>
-                </div>
+<body>
+    <div class="navbar">
+        <a>Purrfect</a>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <div id="dropdown" class="dropdown">
+            <a href="cats.html">Cats</a>
+            <div class="dropdown-content">
+                <a href="#catvideos">Cat Videos</a>
+                <a href="#catgallery">Cat Gallery</a>
+                <a href="#creatememe">Create Your Cat Meme</a>
+                <a href="#catpuns">Cat Puns/Jokes</a>
             </div>
-            <a href="index.html#contact">Contact Us</a>
         </div>
-  </head>
+    </div>
+  
 <div id="sketch">
   <canvas id="paint"></canvas>
 </div>
@@ -44,16 +43,16 @@
 </div>
 
 <div id="settings"> Brush Size:
-  <button onclick="getSize('2');">Small</button>
-  <button onclick="getSize('5');">Med</button>
-  <button onclick="getSize('10');">Large</button>
-  <button onclick="getSize('20');">X Large</button>
+  <button onclick="getSize('2');">Thin</button>
+  <button onclick="getSize('5');">Medium</button>
+  <button onclick="getSize('10');">Thick</button>
+  <button onclick="getSize('20');">Wide</button>
 </div>
 <p> Or add the hex of your own colour! </p>
   <input id="hex" placeholder="#hex"></input>
   <canvas id="draw"></canvas>
 
-  <script src="app.js"></script>
+
 <body>
 		<div id="container">
 			<canvas id="imageView" width="400" height="300">
@@ -64,5 +63,3 @@
 	</body>
    
   </html>
-  
-
