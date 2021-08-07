@@ -11,6 +11,9 @@ body{
     color: white;
 }
 
+h1{
+    text-align: center;
+}
 
 .navbar{
     overflow: hidden;
@@ -84,4 +87,8 @@ body{
   
 .openbtn:hover {
     background-color:#f6bab7;
+}
+
+.container{
+    height: 300px;
 }
