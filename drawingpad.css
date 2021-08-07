@@ -3,7 +3,7 @@
 #settings { display: block; text-align:center}
 
 
-#paint {border: 1px solid black ; margin-left: auto; margin-right: auto; display: block;}
+#paint {border: 1px solid black ; margin-left: auto; margin-right: auto; display: block; background : white}
 body{
     background-image: url('background.jpg');
     font-family: 'Fredoka One', cursive;
