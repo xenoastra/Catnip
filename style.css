@@ -261,3 +261,20 @@ input[type=submit]:hover {
 /************** CAT PUN GENERATOR **********/
 
 
+/****************** SKETCH A CAT ************/
+#settings{ 
+    display: block; 
+    text-align:center
+}
+
+
+#paint{
+    border: 1px solid black ; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+    background : white
+}
+
+
+
