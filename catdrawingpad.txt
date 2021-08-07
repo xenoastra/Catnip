@@ -180,3 +180,33 @@ tools.pencil = function () {
 	#imageView { border: 1px solid #000; }
 	#imageTemp { position: absolute; top: 1px; left: 1px; }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+ <label>Brush Size:
+	<select id="dtool">
+   		<option value="Thin">Thin</option>
+		<option value="Medium">Medium</option>
+        <option value="Thick">Thick</option>
+		
+	</select>
+</label>
+ <label>Brush Colour:
+	<select id="dtools">
+     	<option value="Black">Black</option>
+   		<option value="Red">Red</option>
+		<option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+		<option value="Blue">Blue</option>
+        <option value="Purple">Purple</option>
+        <option value="Eraser">Eraser</option>
