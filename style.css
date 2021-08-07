@@ -15,6 +15,9 @@ h1{
     text-align: center;
 }
 
+
+
+/************* NAVBAR STUFF ***************/
 .navbar{
     overflow: hidden;
     background-color: #f4afab;
@@ -89,6 +92,26 @@ h1{
     background-color:#f6bab7;
 }
 
+/***************** MAIN *********************/
+
+/****************** ABOUT US ********************/
+.blob{
+    width: 300px;
+    fill:#f4afab;
+}
+
+.blob-img{
+    width: 200px;
+}
+/********************** CAT VIDEO ****************/
 .container{
     height: 300px;
 }
+
+/***************** CAT GALLERY *****************/
+
+/**************** MEME GENERATOR ****************/
+
+/************** CAT PUN GENERATOR **********/
+
+
