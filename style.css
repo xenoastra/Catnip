@@ -110,24 +110,34 @@ p{
     width: 200px;
 }
 
-.profile{
-    display: block;
-    margin: 0 auto;
+.row{
+    float: left;
+    position: relative;
+    left: 50%;
 }
 
-.person{
-    text-align: justify;
+.column{
+    float: left;
+    position: relative;
+    left: -50%;  
 }
+
+figcaption{
+    font-size: 30px;
+    text-align: center;
+}
+
 
 /************** CONTACT US **********************/
+.contact{
+    padding-top: 50%;
+}
+
 form{
     text-align: center;
 }
 
-.contact{
-    margin:auto;
-    padding-top: 10%;
-}
+
 input[type=text], select, textarea {
     width: 50%;
     padding: 12px;
