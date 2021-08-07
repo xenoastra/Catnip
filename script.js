@@ -6,9 +6,8 @@ var ctx = canvas.getContext('2d');
   function getColor(colour){ctx.strokeStyle = colour;}
 
 function getSize(size){ctx.lineWidth = size;}
-  
 
-// The event handler for any changes made to the tool selector
+// canvas
 
  var canvas = document.getElementById("draw");
 
@@ -22,37 +21,35 @@ var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
 canvas.width = 600;
 canvas.height = 550;
-// resize canvas when window is resized
+// resize
 function resize() {
  ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
 }
-
-// initialize position as 0,0
 var pos = { x: 0, y: 0 };
 
-// new position from mouse events
+// mouse
 function setPosition(e) {
   pos.x = e.clientX;
   pos.y = e.clientY;
 }
 
 function draw(e) {
-  if (e.buttons !== 1) return; // if mouse is not clicked, do not go further
+  if (e.buttons !== 1) return; // stop when mouse is not clicked
 
   var color = document.getElementById("hex").value;
 
-  ctx.beginPath(); // begin the drawing path
+  ctx.beginPath(); // drawing path
 
   // width of line
-  ctx.lineCap = "round"; // rounded end cap
-  ctx.strokeStyle = color; // hex color of line
+  ctx.lineCap = "round"; 
+  ctx.strokeStyle = color; // hex color 
 
   ctx.moveTo(pos.x, pos.y); // from position
   setPosition(e);
   ctx.lineTo(pos.x, pos.y); // to position
 
-  ctx.stroke(); // draw it!
+  ctx.stroke(); //stroke
 }
 
 
