@@ -3,8 +3,8 @@ var ctx = canvas.getContext('2d');
  
 var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
-canvas.width = 500;
-canvas.height = 250;
+canvas.width = 1500;
+canvas.height = 1250;
 
 var mouse = {x: 0, y: 0};
  
