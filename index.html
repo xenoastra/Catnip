@@ -10,15 +10,37 @@
     </head>
     
     <body>
-        <div id="dropdown" class="dropdown">
+        <!-- <div id="dropdown" class="dropdown">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="#catvideos">Cat Videos</a>
             <a href="#catgallery">Cat Gallery</a>
             <a href="#creatememe">Create Your Cat Meme</a>
             <a href="#catpuns">Cat Puns/Jokes</a>
-          </div>
+        </div> -->
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <div id="dropdown" class="dropdown">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="dropdown-content">
+                    <a href="#catvideos">Cat Videos</a>
+                    <a href="#catgallery">Cat Gallery</a>
+                    <a href="#creatememe">Create Your Cat Meme</a>
+                    <a href="#catpuns">Cat Puns/Jokes</a>
+                </div>
+                
+            </div>
+            <button class="openbtn" onclick="openNav()">Cats</button>
+            <!-- <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><button class="openbtn" onclick="openNav()">Cats</button>  </li>
+            </ul> -->
+        </div>
+
+        
     </body>
-    <button class="openbtn" onclick="openNav()">Cats</button>  
+    
 
 
 </html>

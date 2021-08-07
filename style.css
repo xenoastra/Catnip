@@ -18,7 +18,7 @@ body{
     height: 250px;
     top: -10;
     left: 0;
-    background-color: #ea57b2;
+    background-color: #f4afab;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -51,7 +51,7 @@ body{
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color:#ea57b2;
+    background-color:#f4afab;
     color: white;
     padding: 10px 15px;
     border: none;
