@@ -19,8 +19,8 @@ var ctx = canvas.getContext('2d');
  
 var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
-canvas.width = 1000;
-canvas.height = 950;
+canvas.width = 1600;
+canvas.height = 1550;
 // resize canvas when window is resized
 function resize() {
  ctx.canvas.width = window.innerWidth;
