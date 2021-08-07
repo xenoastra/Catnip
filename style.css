@@ -18,7 +18,7 @@ body{
     height: 250px;
     top: -10;
     left: 0;
-    background-color: #c78fe3;
+    background-color: #ea57b2;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -38,7 +38,7 @@ body{
   }
   
   .dropdown a:hover {
-    color:#c916aa;
+    color:#f5a3e7;
   }
   
   .dropdown .closebtn {
@@ -51,12 +51,12 @@ body{
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #8657de;
+    background-color:#ea57b2;
     color: white;
     padding: 10px 15px;
     border: none;
   }
   
   .openbtn:hover {
-    background-color:#e89bd5;
+    background-color:#ff8fda;
   }
