@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Paint</title>
+		<style>
+			#container { position: relative; }
+			#imageView { border: 1px solid #000; }
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<canvas id="imageView" width="400" height="300">
+				
+			</canvas>
+		</div>
+		<script src="script.js"></script>
+	</body>
+    <label>Drawing tool:
+	<select id="dtool">
+   		<option value="pencil">Pencil</option>
+		<option value="rect">Rectangle</option>
+		
+	</select>
+</label>
+</html>
+<script>
+var tool = false;
+var tool_default = 'pencil';
+
+function init () {
+	// Get the tool select input
+	var tool_select = document.getElementById('dtool');
+	if (!tool_select) {
+		alert('Error: failed to get the dtool element!');
+		return;
+	}
+	tool_select.addEventListener('change', ev_tool_change, false);
+
+	// Activate the default tool.
+	if (tools[tool_default]) {
+		tool = new tools[tool_default]();
+		tool_select.value = tool_default;
+	}
+}
+
+// The event handler for any changes made to the tool selector
+function ev_tool_change (ev) {
+	if (tools[this.value]) {
+		tool = new tools[this.value]();
+	}
+}
+
+// This object holds the implementation of each drawing tool
+var tools = {};
+
+// The drawing pencil.
+tools.pencil = function () {
+	// …
+};
+// This painting tool works like a drawing
+// pencil which tracks the mouse movements
+function tool_pencil () {
+	var tool = this;
+	this.started = false;
+
+	// This is called when you start holding down the mouse button
+	// This starts the pencil drawing
+	this.mousedown = function (ev) {
+			context.beginPath();
+			context.moveTo(ev._x, ev._y);
+			tool.started = true;
+	};
+
+	// This function is called every time you move the mouse. Obviously, it only
+	// draws if the tool.started state is set to true (when you are holding down
+	// the mouse button)
+	this.mousemove = function (ev) {
+		if (tool.started) {
+			context.lineTo(ev._x, ev._y);
+			context.stroke();
+		}
+	};
+
+	// This is called when you release the mouse button
+	this.mouseup = function (ev) {
+		if (tool.started) {
+			tool.mousemove(ev);
+			tool.started = false;
+		}
+	};
+}
+
+// The general-purpose event handler. This function just determines
+// the mouse position relative to the <canvas> element
+function ev_canvas (ev) {
+	// Firefox
+	if (ev.layerX || ev.layerX == 0) {
+		ev._x = ev.layerX;
+		ev._y = ev.layerY;
+	// Opera
+	} else if (ev.offsetX || ev.offsetX == 0) {
+		ev._x = ev.offsetX;
+		ev._y = ev.offsetY;
+	}
+
+	// Call the event handler of the tool
+	var func = tool[ev.type];
+	if (func) {
+		func(ev);
+	}
+}
+function img_update () {
+	contexto.drawImage(canvas, 0, 0);
+	context.clearRect(0, 0, canvas.width, canvas.height);
+}
+tools.pencil = function () {
+	this.mouseup = function (ev) {
+		if (tool.started) {
+			tool.mousemove(ev);
+			tool.started = false;
+			img_update();
+		}
+	};
+};
+
+
+</script>
+<style>
+	#container { position: relative; }
+	#imageView { border: 1px solid #000; }
+	#imageTemp { position: absolute; top: 1px; left: 1px; }
+</style>
