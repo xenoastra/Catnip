@@ -275,7 +275,9 @@ input[type=submit]:hover {
     to {opacity: 1}
 }
 /**************** MEME GENERATOR ****************/
-
+#creatememe{
+    padding-top: 20%;
+}
 /************** CAT PUN GENERATOR **********/
 
 
@@ -284,7 +286,6 @@ input[type=submit]:hover {
     display: block; 
     text-align:center;
 }
-
 
 #paint{
     top: 10%;

@@ -32,27 +32,28 @@
  <canvas id="paint" width="400px" height="400px"></canvas>
 </div>
 
-<div id="settings"> Colour:
-  <button onclick="getColor('black');">Black</button>
-  <button onclick="getColor('red');">Red</button>
-  <button onclick="getColor('orange');">Orange</button>
-  <button onclick="getColor('yellow');">Yellow</button>
-  <button onclick="getColor('green');">Green</button>
-  <button onclick="getColor('blue');">Blue</button>
-  <button onclick="getColor('purple');">Purple</button>
-  <button onclick="getColor('white');">Eraser</button>
+<div class="settings"> Colour:
+  <button class="button" onclick="getColor('black');">Black</button>
+  <button class="button" onclick="getColor('red');">Red</button>
+  <button class="button" onclick="getColor('orange');">Orange</button>
+  <button class="button" onclick="getColor('yellow');">Yellow</button>
+  <button class="button" onclick="getColor('green');">Green</button>
+  <button class="button" onclick="getColor('blue');">Blue</button>
+  <button class="button" onclick="getColor('purple');">Purple</button>
+  <button class="button" onclick="getColor('white');">Eraser</button>
   
 </div>
 
-<div id="settings"> Brush Size:
-  <button onclick="getSize('2');">Thin</button>
-  <button onclick="getSize('5');">Medium</button>
-  <button onclick="getSize('10');">Thick</button>
-  <button onclick="getSize('20');">Wide</button>
+<div class="settings"> Brush Size:
+  <button class="button" onclick="getSize('2');">Thin</button>
+  <button class="button" onclick="getSize('5');">Medium</button>
+  <button class="button" onclick="getSize('10');">Thick</button>
+  <button class="button" onclick="getSize('20');">Wide</button>
 </div>
 <p> Or add the hex of your own colour! </p>
 <div class="code">
   <input id="hex" placeholder="#hex"></input>
+</div>  
   <canvas id="draw"></canvas>
 
 
