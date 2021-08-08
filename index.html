@@ -25,14 +25,8 @@
                 </div>
             </div>
             <a href="#contact">Contact Us</a>
-            
             <audio id="catpurr" src="sfx/Cat Purr.mp3"></audio>
-           
-
-
         </div>
-
-
 
 
         <div class="main">
@@ -86,8 +80,6 @@
                 </div>
             </div>
 
-
-            
         <!-- </div>
         <div class="contact">
             <h1>Contact Us</h1>
@@ -125,25 +117,22 @@
                 </div>
             </form> -->
             
-            <div class="contact">
-                <div class="contactUs">
-                    <h1>Contact Us</h1>
-                </div>
-
-                <div contact="contactText">
-                    <p>If you have any suggestions, questions or even want to upload your own cat photo to our cat gallery,
-                        make sure to send us an email!
-                    </p>
-                </div>
-        
-                <form method="post" name="contact_form"
-            action="contact-form-handler.php">
+        <div class="contact">
+            <div class="contactUs">
+                <h1>Contact Us</h1>
+            </div>
+            <div contact="contactText">
+                <p>If you have any suggestions, questions or even want to upload your own cat photo to our cat gallery,
+                    make sure to send us an email!
+                </p>
+            </div>
+            
+            <form name="contact_form" method="get" action="" style="text-align: center;">
                 <div>
                     Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="text" name="name">
                 </div>
                 <p></p>
-            
                 <div>
                     Email Address:
                     <input type="text" name="email">
@@ -154,19 +143,53 @@
                     <label for="message">Message:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <textarea name="message"></textarea>
                 <p></p>
-                <input type="submit" value="Submit">
+                <!-- <input type="submit" value="Submit"> -->
             </form>
+            <button class="button" id="submitBtn">Submit</button>
+            <div id="modal" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <p>Email sent successfully!</p>
+                </div>
             </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById("modal");
+                
+                // Get the button that opens the modal
+                var btn = document.getElementById("submitBtn");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
+        </div>
         
-        <script language="JavaScript">
+        <!-- <script language="JavaScript">
             var frmvalidator  = new Validator("contactform");
             frmvalidator.addValidation("name","req","Please provide your name");
             frmvalidator.addValidation("email","req","Please provide your email");
             frmvalidator.addValidation("email","email",
               "Please enter a valid email address");
-            </script>
+            </script> -->
             
-             <?php
+             <!-- <?php
             $errors = '';
             $myemail = 'itsjustina2002@gmail.com';//<-----Put Your email address here.
             if(empty($_POST['name'])  ||
@@ -198,7 +221,7 @@
             //redirect to the 'thank you' page
             header('Location: contact-form-thank-you.html');
             }
-            ?>
+            ?> -->
 
         
     </body>

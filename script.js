@@ -116,11 +116,3 @@ function draw(e) {
 }
 
 
-// add window event listener to trigger when window is resized
-window.addEventListener("resize", resize);
-
-// add event listeners to trigger on different mouse events
-document.addEventListener("mousemove", draw);
-document.addEventListener("mousedown", setPosition);
-document.addEventListener("mouseenter", setPosition);
-
