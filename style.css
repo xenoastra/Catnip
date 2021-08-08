@@ -97,12 +97,43 @@ p {
 /***************** MAIN *********************/
 #title {
   padding-top: 5%;
-  padding-bottom: 15%;
 }
 
 .emojis{
     text-align: center;
 }
+
+.typewriter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .typingText{
+      display: flex;
+    width: 28ch;
+    animation: typing 2.5s steps(22,end), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ed7d78;   
+    letter-spacing: .15em;
+    padding-bottom: 2.5%;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to{ 
+        width: 57%
+    }
+  }
+      
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #ed7d78; }
+  }
+
 /****************** ABOUT US ********************/
 #about{
     padding-top: 10%;
