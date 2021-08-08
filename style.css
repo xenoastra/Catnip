@@ -157,6 +157,7 @@ p {
 /****************** ABOUT US ********************/
 #about{
     padding-top: 10%;
+    font-size: 30px;
 }
 .blob {
   width: 300px;
@@ -182,6 +183,10 @@ p {
 figcaption {
   font-size: 30px;
   text-align: center;
+}
+
+.about-info{
+    font-size: 25px;
 }
 
 /************** CONTACT US **********************/
@@ -443,4 +448,11 @@ input[type="submit"]:hover {
   margin-left: auto;
   margin-right: auto;
   width: 35%;
+}
+
+
+.emojis {
+    text-align: center;
+    
+
 }

@@ -37,6 +37,7 @@
                      How are you feeling today?
                 </div>
             </div>
+            <!-- </div>
             <div class="emojis">
                 <input type="image" class="emojiButton" name="happy" src="cat emojis/happy_cat.png" alt="text" style="border-radius: 50%; width: 15%; margin: 3%;"/>
                 <input type="image" class="emojiButton" name="sad" src="cat emojis/sad_cat.png" alt="text" style="border-radius: 50%; width: 15%; margin: 3%;"/>
@@ -111,8 +112,71 @@
                 //         modal[2].style.display = "none";
                 //     }
                 // }
-            </script>
-        </div>
+            </script> -->
+
+            
+
+
+
+
+
+                <!-- <div class="text1">
+                    <input type="image" name="happy" src="cat emojis/happy_cat.png" alt="text" style="border-radius: 50%; width: 20%; margin: 3%;" onclick="moodText1()"/> 
+                    <div class="happy" style="display: none;">
+                        heyeyrdgfdgfdgr
+                    </div>
+                </div>
+                <input type="image" name="sad" src="cat emojis/sad_cat.png" alt="text" style="border-radius: 50%; width: 20%; margin: 3%;"/>
+                <input type="image" name="angry" src="cat emojis/mad_cat.png" alt="text" style="border-radius: 50%; width: 20%; margin: 3%;"/> -->
+                <body>
+                    <style type="text/css">
+                body,input
+                    {
+                    font-size:20px;
+                    
+                    }
+                
+                    </style>
+                    <script type="text/javascript">
+                function showText1(obj)
+                    {
+                    var inner = obj.parentNode.getElementsByTagName("div")[0];
+                    if (inner.style.display == "none")
+                        inner.style.display = "";
+                    else
+                        inner.style.display = "none";
+                    }
+                    </script>
+                
+                <div class="emojis">
+                    <div class="mood">
+                        <img onclick="showText1(this);" src="cat emojis/happy_cat.png" style="border-radius: 50%; width: 15%;  margin-right: 50%; margin-bottom: -1%;"  />
+                        <div class="inner" style="display:none;">
+                        <p>I'm so glad to hear that you're feeling good!
+                            I hope that the activities on this website can keep your mood up :) .</p>
+                        </div>
+                    </div>
+        
+                    <div class="mood">
+                        <img onclick="showText1(this);" src="cat emojis/sad_cat.png" style="border-radius: 50%; width: 15%; margin-top: -15%; margin-right: 0%;"  />
+                        <div class="inner" style="display:none;">
+                        <p>I'm so sorry to hear that. It's okay to feel that way.
+                            I hope that the activities on this website could help cheer you up.
+                            Even a little bit will make me happy :)). You're amazing! </p>
+                        </div>
+                    </div>
+        
+                    <div class="mood">
+                        <img onclick="showText1(this);" src="cat emojis/mad_cat.png" style="border-radius: 50%; width: 15%; margin: 3%; margin-left: 50%; margin-top: -15%;"  />
+                        <div class="inner" style="display:none;">
+                        <p>I'm sorry to hear that. It is completely valid to feel that way.
+                            You can try cooling down first by taking some deep breath and indulging
+                            yourself in some cat filled content! You are going to be fine don't worry.
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
 
         <div id="about">
             <h1>About Us</h1>
