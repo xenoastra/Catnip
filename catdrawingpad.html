@@ -25,12 +25,11 @@
       </div>
       <a href="index.html#contact">Contact Us</a>
     </div>
-  
 <div id="sketch">
-  <canvas id="paint"></canvas>
+ <canvas id="paint" width="400px" height="400px"></canvas>
 </div>
 
-<div id="settings"> Colours
+<div id="settings"> Colour:
   <button onclick="getColor('black');">Black</button>
   <button onclick="getColor('red');">Red</button>
   <button onclick="getColor('orange');">Orange</button>
@@ -42,8 +41,8 @@
   
 </div>
 
-<div id="settings"> Brush Size
-  <button onclick="getSize('3');">Thin</button>
+<div id="settings"> Brush Size:
+  <button onclick="getSize('2');">Thin</button>
   <button onclick="getSize('5');">Medium</button>
   <button onclick="getSize('10');">Thick</button>
   <button onclick="getSize('20');">Wide</button>
@@ -51,7 +50,16 @@
 <p> Or add the hex of your own colour! </p>
   <input id="hex" placeholder="#hex"></input>
   <canvas id="draw"></canvas>
-  
+
+
+<body>
+		<div id="container">
+			<canvas id="imageView" width="400" height="300">
+				
+			</canvas>
+		</div>
+		<script src="script.js"></script>
+	</body>
    
-</body>
-</html>
+  </html>
+  
