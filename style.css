@@ -127,8 +127,14 @@ figcaption {
 }
 
 /************** CONTACT US **********************/
+.contactUs{
+    font-size: 30px;
+}
+
+
 .contact {
-  padding-top: 50%;
+  padding-top: 40%;
+  font-size: 20px;
 }
 
 form {
