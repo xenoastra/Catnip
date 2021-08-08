@@ -9,14 +9,28 @@
     <link rel="stylesheet" href="style.css">
     <title>Cats</title>
 </head>
-
-
+<body>
+  <div class="navbar">
+      <a>Purrfect</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <div id="dropdown" class="dropdown">
+          <a href="cats.html">Cats</a>
+          <div class="dropdown-content">
+              <a href="cats.html#catvideos">Cat Videos</a>
+              <a href="cats.html#catgallery">Cat Gallery</a>
+              <a href="cats.html#creatememe">Create Your Cat Meme</a>
+              <a href="cats.html#catpuns">Cat Puns/Jokes</a>
+          </div>
+      </div>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
   
 <div id="sketch">
   <canvas id="paint"></canvas>
 </div>
 
-<div id="settings"> Colour:
+<div id="settings"> Colours
   <button onclick="getColor('black');">Black</button>
   <button onclick="getColor('red');">Red</button>
   <button onclick="getColor('orange');">Orange</button>
@@ -28,7 +42,7 @@
   
 </div>
 
-<div id="settings"> Brush Size:
+<div id="settings"> Brush Size
   <button onclick="getSize('3');">Thin</button>
   <button onclick="getSize('5');">Medium</button>
   <button onclick="getSize('10');">Thick</button>
@@ -37,21 +51,7 @@
 <p> Or add the hex of your own colour! </p>
   <input id="hex" placeholder="#hex"></input>
   <canvas id="draw"></canvas>
-  <body>
-    <div class="navbar">
-        <a>Purrfect</a>
-        <a href="index.html">Home</a>
-        <a href="index.html#about">About Us</a>
-        <div id="dropdown" class="dropdown">
-            <a href="cats.html">Cats</a>
-            <div class="dropdown-content">
-                <a href="cats.html#catvideos">Cat Videos</a>
-                <a href="cats.html#catgallery">Cat Gallery</a>
-                <a href="cats.html#creatememe">Create Your Cat Meme</a>
-                <a href="cats.html#catpuns">Cat Puns/Jokes</a>
-            </div>
-        </div>
-        <a href="index.html#contact">Contact Us</a>
-    </div>
+  
+   
 </body>
 </html>
