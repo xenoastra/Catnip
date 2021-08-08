@@ -10,7 +10,7 @@
 
     <body>
         <div class="navbar">
-            <a>Purrfect</a>
+            <a onmouseover="play('catpurr')" onmouseout="stop('catpurr')">Purrfect</a>
             <a href="index.html">Home</a>
             <a href="index.html#about">About Us</a>
             <div id="dropdown" class="dropdown">
@@ -24,6 +24,7 @@
                 </div>
             </div>
             <a href="index.html#contact">Contact Us</a>
+            <audio id="catpurr" src="sfx/Cat Purr.mp3"></audio>
         </div>
 
         <div class="main">
@@ -125,7 +126,7 @@
             </div>
         </div> 
 
-        <!-- <div id="creatememe">
+        <div id="creatememe">
             <h1>Create Your Cat Meme</h1>
             <label for="userText">Enter text here</label>
             <input type="text"id="userText" name="userText">
@@ -136,7 +137,7 @@
         <div id="catpuns">
             <h1>Cat Puns/Jokes</h1>
             
-        </div> -->
+        </div>
 
 
 

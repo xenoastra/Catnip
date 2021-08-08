@@ -27,6 +27,17 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+function play(sound){
+  var s = document.getElementById(sound);
+  s.play();
+}
+
+function stop(sound){
+  var s = document.getElementById(sound);
+  s.onpause();
+  s.currentTime=0;
+}
+
 function MemeArray(){
   var imgArray = new Array();
   imgArray[0] = 'meme pics/bread cat.jpg';

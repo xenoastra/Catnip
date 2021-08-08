@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="navbar">
-      <a>Purrfect</a>
+      <a onmouseover="play('catpurr')" onmouseout="stop('catpurr')">Purrfect</a>
       <a href="index.html">Home</a>
       <a href="index.html#about">About Us</a>
       <div id="dropdown" class="dropdown">
@@ -25,7 +25,9 @@
           </div>
       </div>
       <a href="index.html#contact">Contact Us</a>
+      <audio id="catpurr" src="sfx/Cat Purr.mp3"></audio>
     </div>
+    
 <div id="sketch">
  <canvas id="paint" width="400px" height="400px"></canvas>
 </div>
