@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <title>Purrfect</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg"/>
     </head>
     
     <body>
@@ -30,18 +31,87 @@
 
 
         <div class="main">
-            <h1 id="title" style="font-size:200px;">Welcome</h1>
+            <h1 id="title" style="font-size:150px;">Welcome</h1>
             <div class="typewriter">
                 <div class="typingText" style="font-size:40px;">
                      How are you feeling today?
                 </div>
             </div>
             <div class="emojis">
-                <input type="image" name="happy" src="cat emojis/happy_cat.png" alt="text" style="border-radius: 50%; width: 20%; margin: 3%;"/>
-                <input type="image" name="sad" src="cat emojis/sad_cat.png" alt="text" style="border-radius: 50%; width: 20%; margin: 3%;"/>
-                <input type="image" name="angry" src="cat emojis/mad_cat.png" alt="text" style="border-radius: 50%; width: 20%; margin: 3%;"/>
+                <input type="image" class="emojiButton" name="happy" src="cat emojis/happy_cat.png" alt="text" style="border-radius: 50%; width: 15%; margin: 3%;"/>
+                <input type="image" class="emojiButton" name="sad" src="cat emojis/sad_cat.png" alt="text" style="border-radius: 50%; width: 15%; margin: 3%;"/>
+                <input type="image" class="emojiButton" name="mad" src="cat emojis/mad_cat.png" alt="text" style="border-radius: 50%; width: 15%; margin: 3%;"/>
             </div>
-            
+
+            <div class="eModal">
+                <div id="happy" class="emotionContent">
+                    <span class="close">&times;</span>
+                    <p>I'm so glad to hear that you're feeling good!
+                        I hope that the activities on this website can keep your mood up :).
+                    </p>
+                </div>
+            </div>
+
+            <div class="eModal">
+                <div id="sad" class="emotionContent">
+                    <span class="close">&times;</span>
+                    <p>I'm so sorry to hear that. It's okay to feel that way.
+                        I hope that the activities on this website could help cheer you up.
+                        Even a little bit will make me happy :)). You're amazing! 
+                    </p>
+                </div>
+            </div>
+
+            <div class="eModal">
+                <div id="mad" class="emotionContent">
+                    <span class="close">&times;</span>
+                    <p>I'm sorry to hear that. It is completely valid to feel that way.
+                        You can try cooling down first by taking some deep breath and indulging
+                        yourself in some cat filled content! You are going to be fine don't worry.
+                    </p>
+                </div>
+            </div>
+            <script>
+                // var modal = document.getElementByClassName("eModal");
+                // var btn = document.getElementByClassName("emojis");
+                // var span = document.getElementsByClassName("close")[0];
+
+                // btn[0].onclick = function() {
+                //     modal[0].style.display = "block";
+                // }
+
+                // btn[1].onclick = function() {
+                //     modal[1].style.display = "block";
+                // }
+
+                // btn[2].onclick = function() {
+                //     modal[2].style.display = "block";
+                // }
+
+                // span[0].onclick = function() {
+                //     modal[0].style.display = "none";
+                // }
+
+                // span[1].onclick = function() {
+                //     modal[1].style.display = "none";
+                // }
+
+                // span[2].onclick = function() {
+                //     modal[2].style.display = "none";
+                // }
+
+                // window.onclick = function(event) {
+                //     if (event.target == modal[0]) {
+                //         modal[0].style.display = "none";
+                //     }
+                //     if (event.target == modal[1]) {
+                //         modal[1].style.display = "none";
+                //     }
+                //     if (event.target == modal[2]) {
+                //         modal[2].style.display = "none";
+                //     }
+                // }
+            </script>
         </div>
 
         <div id="about">
@@ -168,32 +238,24 @@
                 </div>
             </div>
             <script>
-                // Get the modal
                 var modal = document.getElementById("modal");
-                
-                // Get the button that opens the modal
                 var btn = document.getElementById("submitBtn");
-                
-                // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
                 
-                // When the user clicks the button, open the modal 
                 btn.onclick = function() {
                   modal.style.display = "block";
                 }
-                
-                // When the user clicks on <span> (x), close the modal
+
                 span.onclick = function() {
                   modal.style.display = "none";
                 }
-                
-                // When the user clicks anywhere outside of the modal, close it
+
                 window.onclick = function(event) {
                   if (event.target == modal) {
                     modal.style.display = "none";
                   }
                 }
-                </script>
+            </script>
         </div>
         
         <!-- <script language="JavaScript">

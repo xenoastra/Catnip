@@ -95,9 +95,6 @@ p {
 }
 
 /***************** MAIN *********************/
-#title {
-  padding-top: 5%;
-}
 
 .emojis{
     text-align: center;
@@ -108,31 +105,54 @@ p {
     align-items: center;
     justify-content: center;
     
-  }
-  .typingText{
-      display: flex;
+}
+
+.typingText{
+    display: flex;
     width: 28ch;
     animation: typing 2.5s steps(22,end), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #ed7d78;   
     letter-spacing: .15em;
-    padding-bottom: 2.5%;
-  }
+    padding-bottom: 1.5%;
+}
 
-  @keyframes typing {
+@keyframes typing {
     from {
       width: 0
     }
     to{ 
         width: 57%
     }
-  }
+}
       
-  @keyframes blink {
+@keyframes blink {
     from, to { border-color: transparent }
     50% { border-color: #ed7d78; }
-  }
+}
+
+.eModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.emotionContent{
+    background-color: #f4afab;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
 
 /****************** ABOUT US ********************/
 #about{
