@@ -163,30 +163,54 @@
 
         <div id="creatememe">
             <h1>Create Your Cat Meme</h1>
-            <div class="text">
+            <div class="text" id="memeContainer">
                 <form action="action_page.php">
                     <div>
                         <label for="topText">Enter top text here &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                        <input type="text"id="topText" name="topText">  
+                        <input type="text"id="topText" name="topText" onkeyup="setTop()">  
                     </div>
                     <p></p>
                     <div>
                         <label for="bottomText">Enter bottom text here</label>
-                        <input type="text" id="bottomText" name="bottomText"> 
+                        <input type="text" id="bottomText" name="bottomText" onkeyup="setBottom()"> 
                     </div>
                 </form>
                 <p></p>
             </div>
 
             <div class="img">
-                <button class= "button" onclick="MemeArray()">Generate!</button>
+                <button id="generateMeme"class= "button" onclick="MemeArray()">Generate!</button>
                 <p></p>
+                <p id="top">top</p>
                 <span id="randomImg"></span>
+                <p id="bottom">bottom</p>
             </div>
 
-            <div>
-                <button></button>
-            </div>
+            <script type="text/javascript" src="html2canvas.js">
+                function setTop(){
+                    document.getElementById('top').innerHTML = topText.value;
+                }
+
+                function setBottom(){
+                    document.getElementById('bottom').innerHTML = bottomText.value;
+                }
+                document.getElementById('generateMeme').addEventListener('click', function(){
+                    var topText = document.getElementById('topText').value;
+                    var bottomText = document.getElementById('bottomText').value;
+
+                    html2canvas(document.getElementById('memeContainer'), {
+                        allowTaint: true,
+                        logging: true,
+                        onrendered: function(canvas){
+                            document.getElementById('randomImg').src=canvas.toDataURL("image/png");
+                        }
+                    });
+                });
+
+
+            </script>
+
+            
         </div>
 
         <div id="catpuns">

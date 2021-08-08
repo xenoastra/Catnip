@@ -291,12 +291,17 @@ input[type="submit"]:hover {
 }
 /**************** MEME GENERATOR ****************/
 #creatememe{
-    padding-top: 20%;
+    padding-top: 10%;
 }
 /************** CAT PUN GENERATOR **********/
+#catpuns{
+    padding-top: 10%;
+}
+
 .pun {
-  font-size: 30px;
-  padding: 20px;
+    font-size: 30px;
+    padding: 20px;
+  
 }
 /****************** SKETCH A CAT ************/
 .settings {
