@@ -213,9 +213,10 @@ input[type="submit"]:hover {
 .mySlides {
   text-align: center;
   position: relative;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  padding-bottom: 5%;
+  padding-left: 35%;
+  padding-right: 35%;
+  padding-bottom: 2.5%;
+  
 }
 
 .prev,
