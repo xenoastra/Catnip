@@ -284,6 +284,9 @@ input[type="submit"]:hover {
   }
 }
 /**************** MEME GENERATOR ****************/
+#creatememe{
+    padding-top: 20%;
+}
 /************** CAT PUN GENERATOR **********/
 .pun {
   font-size: 30px;
@@ -295,13 +298,13 @@ input[type="submit"]:hover {
   text-align: center;
 }
 
-#paint {
-  top: 10%;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  background: white;
+#paint{
+    top: 10%;
+    border: 1px solid black ; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+    background : white
 }
 
 .code {
