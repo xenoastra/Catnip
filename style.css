@@ -280,13 +280,14 @@ input[type=submit]:hover {
 
 
 /****************** SKETCH A CAT ************/
-#settings{ 
+.settings{ 
     display: block; 
-    text-align:center
+    text-align:center;
 }
 
 
 #paint{
+    top: 10%;
     border: 1px solid black ; 
     margin-left: auto; 
     margin-right: auto; 
@@ -294,6 +295,21 @@ input[type=submit]:hover {
     background : white
 }
 
+.code{
+    text-align: center;
+}
+
+.button{
+    background-color: #f4afab;
+    color: white;
+    font-family: inherit;
+    border: none;
+
+}
+
+.button:hover{
+    background-color: #ed7d78;
+}
 
 
 
