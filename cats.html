@@ -123,29 +123,66 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
+
         </div> 
 
-        <!-- <div id="creatememe">
             <h1>Create Your Cat Meme</h1>
-            <label for="userText">Enter text here</label>
-            <input type="text"id="userText" name="userText">
-            <button class= "button2" onclick="MemeArray()">Generate!</button>
-            <span id="randomImg"></span>
+            <div class="text">
+                <form action="action_page.php">
+                    <div>
+                        <label for="topText">Enter top text here &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text"id="topText" name="topText">  
+                    </div>
+                    <p></p>
+                    <div>
+                        <label for="bottomText">Enter bottom text here</label>
+                        <input type="text" id="bottomText" name="bottomText"> 
+                    </div>
+                </form>
+                <p></p>
+            </div>
+
+            <div class="img">
+                <button class= "button" onclick="MemeArray()">Generate!</button>
+                <p></p>
+                <span id="randomImg"></span>
+            </div>
+
+            <div>
+                <button></button>
+            </div>
         </div>
 
         <div id="catpuns">
             <h1>Cat Puns/Jokes</h1>
+         </div>
+         <script>
+            var punArray = [
+            "What did the cat say when her friend wouldn't believe her? Listen, I'm fur real!",
+            "What kind of sports car does a cat drive? A Furrari!",
+            "All kitten aside, cats are the best pets",
+            "What do you call a pile of cats? A Meowntain.",
+            "A cat’s most important trait is their purrsonality.",
+            "What do cat’s wear to bed? Pawjamas",
+            "What’s a cats favourite subject? Hiss-tory!",
+            "What did the cat say when it was confused? I’m Purr-plexed!",
+            "What did the senior cat say to the kitten when she saw him slouching? You need to pay more attention to your pawsture.",
+            "We’re moving too fast, we need to put things on paws",
+            "Why are cats so good at video games? Because they have 9 lives, of course!",
+            "What's the unluckiest kind of cat to have? A catastrophe!",
+            "What do you call a cat that gets everything it wants Purrsuasive!"];
             
-        </div> -->
-
-
-
-
-
-
-
-
-
+            function returnPun(){
+                var randPun = punArray[Math.floor(Math.random()*punArray.length)];
+                document.getElementById("message").innerHTML = randPun;
+            }
+        </script>
+        <div class="pun">
+            <button class="button" onclick="returnPun()">Generate!</button>
+            <p id="message" ></p>
+        </div>
+        
+        
     </body>
 </html>
 <script src="script.js"></script>

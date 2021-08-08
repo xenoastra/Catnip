@@ -1,314 +1,337 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
-
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    background-image: url('background.jpg');
-    font-family: 'Fredoka One', cursive;
-    color: white;
+body {
+  background-image: url("background.jpg");
+  font-family: "Fredoka One", cursive;
+  color: white;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-p{
-    text-align: center;
+p {
+  text-align: center;
 }
-
 
 /************* NAVBAR STUFF ***************/
-.navbar{
-    overflow: hidden;
-    background-color: #f4afab;
-    width: 100%;
+.navbar {
+  overflow: hidden;
+  background-color: #f4afab;
+  width: 100%;
 }
 
-.navbar a{
-    float: left;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    text-decoration: none;
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
 }
 
 .dropdown {
-    float: left;
-    overflow: hidden;
+  float: left;
+  overflow: hidden;
 }
-  
-.dropdown .dropbtn { 
-    border: none;
-    outline: none;
-    color: white;
-    padding: 15px 20px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    font-size: 20px;
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 15px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-size: 20px;
 }
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #ed7d78;
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #ed7d78;
 }
-  
+
 .dropdown-content {
-    display: none;
-    top: 6.5%;
-    position: absolute;
-    background-color: #f4afab;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  top: 6.5%;
+  position: absolute;
+  background-color: #f4afab;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
-  
+
 .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
-  
+
 .dropdown-content a:hover {
-    background-color: #ed7d78;
+  background-color: #ed7d78;
 }
-  
+
 .dropdown:hover .dropdown-content {
-    display: block;
-}  
-  
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color:#f4afab;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+  display: block;
 }
-  
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #f4afab;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
 .openbtn:hover {
-    background-color:#f6bab7;
+  background-color: #f6bab7;
 }
 
 /***************** MAIN *********************/
-#title{
-    padding-top: 5%;
-    padding-bottom: 15%;
+#title {
+  padding-top: 5%;
+  padding-bottom: 15%;
 }
 /****************** ABOUT US ********************/
-.blob{
-    width: 300px;
-    fill:#f4afab;
+.blob {
+  width: 300px;
+  fill: #f4afab;
 }
 
-.blob-img{
-    width: 200px;
+.blob-img {
+  width: 200px;
 }
 
-.row{
-    float: left;
-    position: relative;
-    left: 50%;
+.row {
+  float: left;
+  position: relative;
+  left: 50%;
 }
 
-.column{
-    float: left;
-    position: relative;
-    left: -5%;  
+.column {
+  float: left;
+  position: relative;
+  left: -5%;
 }
 
-figcaption{
-    font-size: 30px;
-    text-align: center;
+figcaption {
+  font-size: 30px;
+  text-align: center;
 }
-
 
 /************** CONTACT US **********************/
-.contact{
-    padding-top: 50%;
+.contact {
+  padding-top: 50%;
 }
 
-form{
-    text-align: center;
+form {
+  text-align: center;
 }
 
-
-input[type=text], select, textarea {
-    width: 50%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+input[type="text"],
+select,
+textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
-  
+
 label {
-    padding: 10px 10px 10px 0;
-    /* display: inline-block; */
+  padding: 10px 10px 10px 0;
+  /* display: inline-block; */
 }
-  
-input[type=submit] {
-    background-color: #f4afab;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: inherit;
+
+input[type="submit"] {
+  background-color: #f4afab;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
 }
-  
-input[type=file] {
-    background-color: #f4afab;
-    color: white;
-    padding: 12px 20px 12px 80px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: inherit;
+
+input[type="file"] {
+  background-color: #f4afab;
+  color: white;
+  padding: 12px 20px 12px 80px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
 }
-  
-input[type=submit]:hover {
-    background-color: #ed7d78;
+
+input[type="submit"]:hover {
+  background-color: #ed7d78;
 }
-  
+
 .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
 }
-  
+
 .col-40 {
-    width: 40%;
+  width: 40%;
 }
-  
+
 /* .col-75 {
     width: 75%;
     margin-top: 6px;
 } */
-  
+
 /********************** CAT VIDEO ****************/
-.row{
-    padding-top: 3%;
-    left: 15%;
-    display: grid;
-    grid-gap: 25%;
-    grid-template-columns: repeat(3, 1fr);
+.row {
+  padding-top: 3%;
+  left: 15%;
+  display: grid;
+  grid-gap: 25%;
+  grid-template-columns: repeat(3, 1fr);
 }
 /***************** CAT GALLERY *****************/
-#catgallery{
-    padding-top: 90%;
+#catgallery {
+  padding-top: 90%;
 }
 /* Slideshow container */
 .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-    z-index: 3;
-    max-height: 1080px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: 3;
+  max-height: 1080px;
 }
 .mySlides {
-    text-align: center;
-    position: relative;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    padding-bottom: 5%;
+  text-align: center;
+  position: relative;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-bottom: 5%;
 }
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 70%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dot {
-    top: 80%;
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    
+  top: 80%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
-    background-color: #717171;
+.active,
+.dot:hover {
+  background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
-  
+
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-  
+
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /**************** MEME GENERATOR ****************/
-
 /************** CAT PUN GENERATOR **********/
-
-
+.pun {
+  font-size: 30px;
+  padding: 20px;
+}
 /****************** SKETCH A CAT ************/
-.settings{ 
-    display: block; 
-    text-align:center;
+.settings {
+  display: block;
+  text-align: center;
 }
 
-
-#paint{
-    top: 10%;
-    border: 1px solid black ; 
-    margin-left: auto; 
-    margin-right: auto; 
-    display: block; 
-    background : white
+#paint {
+  top: 10%;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: white;
 }
 
-.code{
-    text-align: center;
+.code {
+  text-align: center;
 }
 
-.button{
-    background-color: #f4afab;
-    color: white;
-    font-family: inherit;
-    border: none;
-
+.button {
+  background-color: #f4afab;
+  text-align: center;
+  color: white;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
 }
 
-.button:hover{
-    background-color: #ed7d78;
+.button:hover {
+  background-color: #ed7d78;
 }
 
+.text {
+  text-align: center;
+}
 
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}

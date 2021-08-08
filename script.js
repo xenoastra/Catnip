@@ -36,15 +36,15 @@ function MemeArray(){
   imgArray[4] = 'meme pics/funny atto.jpg';
   imgArray[5] = 'meme pics/glasses cat.jpg';
   imgArray[6] = 'meme pics/grumpy cat.jpg';
-  imgArray[7] = 'meme pics/hmm cat.jpg';
+  imgArray[7] = 'meme pics/hmm cat.png';
   imgArray[8] = 'meme pics/loaf cat.jpg';
   imgArray[9] = 'meme pics/standing cat.jpg';
 
 
   var rnd = Math.floor(Math.random()*imgArray.length);
-  return document.getElementById("randomImg").innerHTML = '<img src="'+ imgArray[rnd]+'" />';  
-}
+  return document.getElementById("randomImg").innerHTML = '<img src="' + imgArray[rnd] +  '" width="700" height=700"/>';
 
+}
 
 
 //drawing pad script
@@ -112,5 +112,4 @@ window.addEventListener("resize", resize);
 document.addEventListener("mousemove", draw);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
-
 
