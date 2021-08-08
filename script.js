@@ -73,7 +73,7 @@ canvas.width = 600;
 canvas.height = 550;
 // resize canvas when window is resized
 function resize() {
- ctx.canvas.width = window.innerWidth;
+  ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
 }
 
