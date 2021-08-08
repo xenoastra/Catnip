@@ -27,12 +27,32 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+function MemeArray(){
+  var imgArray = new Array();
+  imgArray[0] = 'meme pics/bread cat.jpg';
+  imgArray[1] = 'meme pics/cat lick.jpg';
+  imgArray[2]= 'meme pics/cat teeth.jpg';
+  imgArray[3] = 'meme pics/cat yawn.jpg';
+  imgArray[4] = 'meme pics/funny atto.jpg';
+  imgArray[5] = 'meme pics/glasses cat.jpg';
+  imgArray[6] = 'meme pics/grumpy cat.jpg';
+  imgArray[7] = 'meme pics/hmm cat.jpg';
+  imgArray[8] = 'meme pics/loaf cat.jpg';
+  imgArray[9] = 'meme pics/standing cat.jpg';
+
+
+  var rnd = Math.floor(Math.random()*imgArray.length);
+  return document.getElementById("randomImg").innerHTML = '<img src="'+ imgArray[rnd]+'" />';  
+}
+
+
+
 //drawing pad script
 var canvas = document.getElementById('paint');
 var ctx = canvas.getContext('2d');
  
 
-  function getColor(colour){ctx.strokeStyle = colour;}
+function getColor(colour){ctx.strokeStyle = colour;}
 
 function getSize(size){ctx.lineWidth = size;}
   
@@ -92,3 +112,5 @@ window.addEventListener("resize", resize);
 document.addEventListener("mousemove", draw);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
+
+
